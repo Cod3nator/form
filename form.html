@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=for, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<body>
+   <div class="holder">
+    <div class="thanks">
+        Thank you we have recived your request!!
+    </div>
+   <div class="f-wrapper">
+    <form name="sFrom" id="form"  style="display: flex;
+    flex-direction: column;width: 50%;; padding: 5rem;">
+        <input type="text" name="name" placeholder="Name" id="name" min="7" required>
+        <input type="text" name="number" placeholder="Mobile Number" minlength="10"  id="number" required>
+        <input type="email" name="email" placeholder="Email"  id="email" required>
+        <textarea name="detail" id="" cols="30" rows="10" minlength="" id="detail" required></textarea>
+        <button type="submit" class="btn btn-primary" onclick=submited()>Submit</button>
+    
+
+    </form>
+   </div>
+   </div>
+    <script>
+        const form=document.querySelector('#form');
+      form.addEventListener("submit", (e)=>{
+        checkEmail();
+        checkNumber();
+        e.preventDefault();
+      })
+       
+ 
+    const name=document.getElementById('name');
+        const number=document.getElementById('number'); 
+        const email=document.getElementById('email');
+         const detail=document.getElementById('detail');   
+    const fwrapper=document.getElementsByClassName('f-wrapper');
+    const thanksM=document.getElementsByClassName('thanks');
+     function checkEmail(){
+        const pattern=/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/;
+        if(!email.value.match(pattern)){
+            console.log("invalid email")
+            return email.classList.add("invalid");
+
+        }
+        email.classList.remove("invalid");
+     }
+     function checkNumber(){
+        const pattern=/^\\d{10}$/;
+        if(!number.value.match(pattern)){
+            console.log(number.length())
+            return number.classList.add("invalid");
+        }
+     }
+    function submited(){
+                fwrapper.classList.add("hide");
+                thanksM.classList.add('show');
+    }
+  
+      
+    </script>
+</body>
+</html>

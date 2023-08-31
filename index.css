@@ -1,0 +1,27 @@
+.invalid{
+    border-color: red;
+}
+.holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    width:500px;
+    height: 500px;
+}
+
+form{
+    background-color: rgb(179, 33, 33);
+}
+.thanks{
+    display: none;
+  background-color: aqua;
+}
+.show{
+    display:flex;
+}
+.hide{
+
+    display:none;
+}
