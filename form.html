@@ -40,7 +40,9 @@
     const fwrapper=document.getElementsByClassName('f-wrapper');
     const thanksM=document.getElementsByClassName('thanks');
      function checkEmail(){
-        const pattern=/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/;
+        const pattern=/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/; 
+
+        
         if(!email.value.match(pattern)){
             console.log("invalid email")
             return email.classList.add("invalid");
